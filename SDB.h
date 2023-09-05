@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "STD.h"
 
-
+//database for students
 struct SimpleDb
 {
  uint32 Student_ID;
@@ -14,7 +14,7 @@ struct SimpleDb
  uint32 Course3_grade;
 }st[10];
 
-
+//functions prototypes
 booll SDB_IsFull();
 uint8 SDB_GetUsedSize();
 booll SDB_AddEntry();
