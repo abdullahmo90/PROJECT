@@ -3,6 +3,9 @@
 #include "SDB.h"
 
 void SDB_action(uint8 choice);
+
+
+//app to get the list of opertion
 void SDB_APP()
 {
 	uint8 choice;
@@ -17,7 +20,7 @@ void SDB_APP()
 
     SDB_action(choice);
 }
-
+//funtion that responsable for take action in the functions
 void SDB_action(uint8 choice)
 {
 	int temp;
@@ -48,7 +51,7 @@ switch (choice)
 }
 	
 }
-while(choice!=0);
+while(choice!=0);//exit choice
 }
 
 void main(void)
