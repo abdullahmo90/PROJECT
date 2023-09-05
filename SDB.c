@@ -8,7 +8,7 @@
 
 int i=0;
 //is full function
-booll SDB_IsFull()
+booll SDB_IsFull()//max number of students
 {
 	if(i==9)
 	{
@@ -21,16 +21,17 @@ booll SDB_IsFull()
 // n of student function
 uint8 SDB_GetUsedSize()
 {
-	printf("the number of students is %d",i);
+	printf("the number of students is %d",i);//i will count the number of students added or subtracted
 }
 
-
+//add 1 student data
 booll SDB_AddEntry()
 {
-    if(SDB_IsFull())
+    if(SDB_IsFull())//check if the database is full
 		return 0;
 	else
 	{
+		//add the student data
 	    printf("add student Details\n");
 	
 	    printf("enter ID of student\n");
@@ -63,6 +64,8 @@ booll SDB_AddEntry()
 	
 
 }
+
+//delete one student
 void SDB_DeletEntry (int temp)
 {
    printf("Enter the ID number of the student\n");
@@ -75,7 +78,7 @@ void SDB_DeletEntry (int temp)
           {
               st[k] = st[k + 1];
           }
-          i--;
+          i--;//-1 of the number of students
       }
    }
    printf("The entered student's record deleted successfully");
@@ -85,11 +88,11 @@ void SDB_DeletEntry (int temp)
 
     
 
-
+//show data of students by searching using id
 booll SDB_ReadEntry (int temp)
 {
    printf("Enter the ID number of the student\n");
-   scanf("%d",&temp);
+   scanf("%d",&temp);//enter id to search the student
    for(int j = 1; j <= i; j++)
    {
        if(temp == st[i].Student_ID)
@@ -114,13 +117,13 @@ booll SDB_ReadEntry (int temp)
 	   }
    }	
 }
-
+//check if the student exist by id
 booll SDB_IsIdExist(int temp)
 {
    printf("Enter the ID number of the student\n");
    scanf("%d", &temp);
    
-   for (int j = 1; j <= i; j++)
+   for (int j = 1; j <= i; j++)//for loop to search all the students in the database
    {
         if (temp == st[i].Student_ID)
 	    {
