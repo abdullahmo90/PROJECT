@@ -1,4 +1,5 @@
 #include<stdbool.h>
+//standard data types
 typedef unsigned char uint8; 
 typedef char Int8;
 typedef unsigned short uint16;
